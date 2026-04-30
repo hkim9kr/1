@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Athlete OS | Authentication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 폰트: 속도감과 미래지향적인 느낌의 두꺼운 서체 */
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;600&display=swap');
+        
+        body { 
+            background-color: #000000; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(0, 102, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 90% 90%, rgba(0, 102, 255, 0.08) 0px, transparent 50%);
+        }
+        
+        .font-logo { font-family: 'Syncopate', sans-serif; }
+        
+        /* 로고 스타일링: A와 T를 날카롭게 표현 */
+        .logo-text {
+            letter-spacing: -0.1em;
+            background: linear-gradient(180deg, #FFFFFF 30%, #5C9DFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 입력창 포커스 효과 (블루) */
+        .input-focus:focus {
+            border-color: #0066FF;
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.3);
+        }
+        
+        /* 버튼 빛나는 효과 */
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col justify-center items-center px-6">
+
+    <div class="mb-16 text-center">
+        <div class="relative inline-block">
+            <div class="absolute -inset-1 bg-[#0066FF] opacity-30 blur-2xl rounded-full"></div>
+            
+            <h1 class="font-logo text-5xl md:text-6xl font-bold relative logo-text italic tracking-tighter">
+                ATHLETE<span class="text-white font-sans not-italic font-light ml-1">OS</span>
+            </h1>
+        </div>
+        <p class="text-[9px] uppercase tracking-[0.6em] text-zinc-500 font-bold mt-4">Performance operating system</p>
+    </div>
+
+    <div class="w-full max-w-sm space-y-6">
+        <div class="space-y-3">
+            <input type="email" placeholder="Athlete ID / Email" 
+                   class="w-full bg-zinc-950 border border-zinc-800 p-4 rounded-xl outline-none input-focus transition-all text-sm tracking-widest text-white uppercase placeholder:text-zinc-600">
+            <input type="password" placeholder="Password" 
+                   class="w-full bg-zinc-950 border border-zinc-800 p-4 rounded-xl outline-none input-focus transition-all text-sm tracking-widest text-white uppercase placeholder:text-zinc-600">
+        </div>
+
+        <button onclick="window.location.href='main.html'" 
+                class="w-full bg-[#0066FF] text-white font-bold py-4 rounded-xl uppercase tracking-widest hover:scale-[1.01] active:scale-95 transition-all text-sm btn-glow">
+            Initialize Session
+        </button>
+
+        <div class="flex justify-center items-center space-x-2 text-xs text-zinc-600">
+            <button class="hover:text-white">Request Access</button>
+            <span>|</span>
+            <button class="hover:text-white">Recover ID</button>
+        </div>
+    </div>
+
+    <div class="absolute bottom-6 left-6 font-mono text-[9px] text-zinc-800 tracking-widest">
+        SECURE CONNECTION // AOS-CORE_v1.0
+    </div>
+    <div class="absolute bottom-6 right-6 font-mono text-[9px] text-zinc-800 tracking-widest">
+        STATUS: ONLINE
+    </div>
+
+</body>
+</html>
